@@ -7,14 +7,7 @@ export default function App() {
     const Items = Data.map( 
         x => <Card 
                 key={x.id}
-                image={`../images/${x.coverImage}`}
-                altText='Image1'
-                rating={x.stats.rating}
-                reviewCount={x.stats.reviewCount}
-                country={x.location}
-                title={x.title}
-                price={"$" + x.price}   
-                openSlots={x.openSlots}     
+                {...x}
         
         />)
     return (
